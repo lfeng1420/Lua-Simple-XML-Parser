@@ -1,7 +1,11 @@
+# Original Git
+[Lua-Simple-XML-Parser by Cluain](https://github.com/Cluain/Lua-Simple-XML-Parser)
+<br>I modified some of the code to make it compatible with LUA 5.3.
+
 # Installation
 
 1.  Copy the xmlSimple.lua file to your project.
-2.  Create a local variable `local xml = require("xmlSimple.lua").newParser()`
+2.  Create a local variable `local xml = require("XmlParser")`
 3.  Read xml using `xml:ParseXmlText(xmlString)` or `xml:loadFile(xmlFilename, base)`
 
 # Parsing XML
@@ -39,7 +43,7 @@ xml:properties()[1] == {name = "one", value = "two"}
 There's no support for namespaces. When I see namespaces I immediately start to remember days when I worked at corporate. We had to use namespaces only because XML was so convoluted we would not be able to handle it without them. In the end XML parsing took longer for some APIs then actual logic of the API.
 If you're in this situation it is better to step back and do something about it rather than asking for namespace support.
 I am using this module to read fairly simple XML. Even if it is a large XML string, the structure is still simple, so I was not able to test it properly. Please create a new Issue if you spot a problem. 
-Please take a loook at xmlTest.lua for an example of use.
+Please take a loook at `xmlTest.lua(or NewXmlTest.lua)` for an example of use.
 
 # Final notes
 
